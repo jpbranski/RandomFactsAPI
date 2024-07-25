@@ -63,7 +63,6 @@ API Routes
 
 # http://127.0.0.1:5000/fact
 @app.route('/fact', methods=['GET'])
-@lru_cache(maxsize=128)
 def get_random_fact():
     logger.info("Retrieving random fact.")
     random_fact = random.choice(facts)
